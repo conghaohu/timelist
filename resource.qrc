@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>img/background.jpg</file>
+        <file>img/lock.png</file>
+        <file>img/user.png</file>
+        <file>img/arrow-up-from-line.png</file>
+        <file>img/settings.png</file>
+        <file>img/secbackground.jpg</file>
+    </qresource>
+</RCC>
