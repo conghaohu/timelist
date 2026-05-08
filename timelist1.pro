@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    seconddialog.cpp
+    seconddialog.cpp \
+    settingsdialog.cpp
 
 HEADERS += \
     mainwindow.h \
-    seconddialog.h
+    seconddialog.h \
+    settingsdialog.h
 
 FORMS += \
     mainwindow.ui \

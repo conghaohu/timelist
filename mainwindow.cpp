@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);//初始化界面
 
     connect(ui->login, &QPushButton::clicked, this, &MainWindow::doLogin);//获取按键信息
+    connect(ui->lineEdit_password, &QLineEdit::returnPressed, this, &MainWindow::doLogin);//回车登录
 
     QPixmap bg(":/resource/img/background.jpg");//加载背景图片
     QPixmap scaled = bg.scaled(this->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);//自适应缩放
@@ -41,7 +42,8 @@ void MainWindow::doLogin()
         hide();//隐藏登录窗口
         secWin = new SecondDialog(this);//创建第二窗口
         secWin->show();//显示登录成功界面
-    } else {
+    }
+    else {
         QMessageBox::warning(this, "Login", "username and password is not correct");//显示登录失败界面
     }
 }

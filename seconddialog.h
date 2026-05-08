@@ -17,6 +17,8 @@
 #include <QTime>
 #include <QColor>
 #include <QSpinBox>
+#include <QTimer>
+#include <QSet>
 
 namespace Ui { class SecondDialog; }//ui命名空间
 
@@ -39,6 +41,12 @@ public:
 
 private slots:
     void addrow();//工作图表所需添加行函数
+    void exportData();//导出数据
+    void openset();//打开设置
+    void checktip();//检查任务提醒
+    void gohome();//回到登录页
+    void showcal();//弹出日历
+    void updatetime();//刷新时间显示
 
 private:
     Ui::SecondDialog *ui;//界面指针
@@ -59,6 +67,13 @@ private:
     void loadCell(QTableWidget *t, int r, int c);//加载单元格数据
     void saveTask();//保存任务函数
     void clearForm();//清空窗口函数
+    void useset();//应用设置
+
+    QTimer *timetip = nullptr;//提醒定时器
+    QSet<QString> noted;//已提醒的任务键值
+
+    QLabel *nowtime = nullptr;//当前时间
+    QTimer *timetr = nullptr;//时间刷新定时器
 };
 
 #endif // SECONDDIALOG_H
