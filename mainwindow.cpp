@@ -34,10 +34,10 @@ MainWindow::~MainWindow()
 //登录所需函数
 void MainWindow::doLogin()
 {
-    QString usr = ui->lineEdit_username->text();//获取用户名
-    QString pwd = ui->lineEdit_password->text();//获取密码
+    QString username = ui->lineEdit_username->text();//获取用户名
+    QString password = ui->lineEdit_password->text();//获取密码
 
-    if (usr == "test" && pwd == "test") {
+    if (username == "test" && password == "test") {//验证账号密码
         QMessageBox::information(this, "Login", "Welcome to TimeList");//登录成功提示
         hide();//隐藏登录窗口
         secWin = new SecondDialog(this);//创建第二窗口
